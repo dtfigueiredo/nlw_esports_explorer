@@ -4,7 +4,7 @@
 :root {
     --background: #121214;
     --card-background: #2A2634;
-    --boder-gradient: linear-gradient(90deg, #9572FC, #43E7AD, #E2D45C);
+    --boder-gradient: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
 
     --primary-text: #fff;
     --secondary-text: #A1A1AA;
@@ -40,7 +40,7 @@ body {
     align-items: center;
 }
 
-/* header */
+/* HEADER */
 header {
     margin: 2rem auto;
 }
@@ -50,27 +50,18 @@ header {
     height: 16rem;
     position: relative;
     padding: 0.25rem;
-}
+    background-image: var(--boder-gradient);
+    border-radius: 50%;
 
-.avatar-border:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    border: 4px solid transparent;
-    border-radius: 100%;
-    background: var(--boder-gradient);
+    animation: fromTop 1500ms;
 }
 
 .avatar {
     width: 100%;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
-/* cards */
+/* MAIN */
 main {
     align-self: stretch;
 }
@@ -79,9 +70,8 @@ main {
     padding-top: 0.25rem;
     margin-bottom: 1.5rem;
 
-    background: var(--boder-gradient);
-    border-radius: 1rem;
-    overflow: hidden;
+    background-image: var(--boder-gradient);
+    border-radius: 0.625rem;
 }
 
 .card {
@@ -94,7 +84,17 @@ main {
     justify-content: center;
     align-items: flex-start;
 
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+}
+
+.border {
+    animation: fromLeft 750ms;
+}
+
+.games-list,
+.streamers-list,
+.socials-list {
+    animation: fromRight 1500ms;
 }
 
 .texts {
@@ -119,18 +119,20 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+
 }
 
 .game-cover {
     width: 90px;
     height: 120px;
+    border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
 }
 
 .streamer-cover {
     width: 70px;
     height: 70px;
-    border-radius: 100%;
+    border-radius: 50%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -144,7 +146,45 @@ main {
 .streamer-cover:hover,
 .socials-cover:hover {
     scale: 1.1;
-    /* -webkit-box-shadow: 0 0 10px 2px #9572FC;
-    -moz-box-shadow: 0 0 10px 2px #9572FC;
-    box-shadow: 0 0 10px 2px #9572FC; */
+}
+
+/* ANIMATIONS */
+@keyframes fromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromLeft {
+    0% {
+        transform: translateX(-300px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
