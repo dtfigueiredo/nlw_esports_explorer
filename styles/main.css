@@ -119,12 +119,15 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-
 }
 
+/* .games-list {
+    margin: 0 auto;
+} */
+
 .game-cover {
-    width: 90px;
-    height: 120px;
+    width: 100px;
+    height: 125px;
     border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
 }

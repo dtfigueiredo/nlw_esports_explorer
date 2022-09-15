@@ -20,42 +20,15 @@
         </header>
 
         <main>
-            <!-- games card -->
+            <!-- books card -->
             <section class="border">
                 <article class="card">
                     <div class="texts">
-                        <h2 class="title">Meus Jogos</h2>
-                        <p class="description">Os games que eu mais curto jogar!</p>
+                        <h2 class="title">Meus Livros</h2>
+                        <p class="description">Os livros que eu mais gostei de ler até hoje!</p>
                     </div>
 
-                    <ul class="list games-list">
-                        <li>
-                            <a target="_blank" rel="noreferrer noopener"
-                                href="https://www.twitch.tv/directory/game/Counter-Strike%3A%20Global%20Offensive"
-                                class="link games-link">
-                                <img class="game-cover"
-                                    src="https://static-cdn.jtvnw.net/ttv-boxart/32399_IGDB-144x192.jpg"
-                                    alt="Capa Counter-Strike Global Offensive">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a target="_blank" rel="noreferrer noopener"
-                                href="https://www.twitch.tv/directory/game/VALORANT" class="link games-link">
-                                <img class="game-cover" src="https://static-cdn.jtvnw.net/ttv-boxart/516575-144x192.jpg"
-                                    alt="Capa Valorant">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a target="_blank" rel="noreferrer noopener"
-                                href="https://www.twitch.tv/directory/game/Tom%20Clancy's%20Rainbow%20Six%20Siege"
-                                class="link games-link">
-                                <img class="game-cover" src="https://static-cdn.jtvnw.net/ttv-boxart/460630-144x192.jpg"
-                                    alt="Capa Rainbow Six Siege">
-                            </a>
-                        </li>
-                    </ul>
+                    <ul class="list games-list" id="games-list"> </ul>
                 </article>
             </section>
 
@@ -67,43 +40,7 @@
                         <p class="description">Lista de canais e transmissões que não perco!</p>
                     </div>
 
-                    <ul class="list streamers-list">
-                        <li>
-                            <a target="_blank" rel="noreferrer noopener" href="https://www.twitch.tv/gaules"
-                                class="link">
-                                <img class="streamer-cover"
-                                    src="https://static-cdn.jtvnw.net/jtv_user_pictures/f4b12683-57ff-4b57-926a-67512b43a7ff-profile_image-150x150.png"
-                                    alt="Canal Gaules">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a target="_blank" rel="noreferrer noopener" href="https://www.twitch.tv/mch_agg"
-                                class="link">
-                                <img class="streamer-cover"
-                                    src="https://static-cdn.jtvnw.net/jtv_user_pictures/dfb0cef3-87ca-4f09-9f52-7d7de319afbb-profile_image-150x150.png"
-                                    alt="Canal Mch">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a target="_blank" rel="noreferrer noopener" href="https://www.twitch.tv/rnakano"
-                                class="link">
-                                <img class="streamer-cover"
-                                    src="https://static-cdn.jtvnw.net/jtv_user_pictures/f990a684-471d-441f-9403-05c837507dee-profile_image-150x150.png"
-                                    alt="Canal Nakano">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a target="_blank" rel="noreferrer noopener" href="https://www.twitch.tv/sksfps1"
-                                class="link">
-                                <img class="streamer-cover"
-                                    src="https://static-cdn.jtvnw.net/jtv_user_pictures/c4d44be8-a906-43a5-a610-a1428e53572d-profile_image-150x150.png"
-                                    alt="Canal sksfps1">
-                            </a>
-                        </li>
-                    </ul>
+                    <ul class="list streamers-list" id="streamers-list"></ul>
                 </article>
             </section>
 
@@ -116,7 +53,7 @@
                         <p class="description">Se conecte comigo agora mesmo!</p>
                     </div>
 
-                    <ul class="list socials-list">
+                    <ul class="list socials-list" id="socials-list">
                         <li>
                             <a target="_blank" rel="noreferrer noopener" href="https://www.twitch.tv/krk__"
                                 class="link">
@@ -175,6 +112,7 @@
         </main>
     </div>
 
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>
